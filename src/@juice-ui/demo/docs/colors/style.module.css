@@ -1,0 +1,133 @@
+.container {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.sub_title {
+  padding: 1rem 0 2rem 0;
+}
+.text {
+  padding-top: 1rem;
+}
+.main_colors,
+.action_colors,
+.alt_colors {
+  padding: 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.colors_array {
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+.colors_array.full_space {
+  width: calc(200% + 0.5rem);
+}
+.color_details {
+  display: flex;
+  align-items: center;
+}
+.color_accessibility {
+  display: initial;
+  text-transform: uppercase;
+  margin-left: 1.5rem;
+  width: 3.5rem;
+}
+.color_item {
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+  line-height: 4rem;
+  padding-left: 0.75rem;
+  padding-right: 1rem;
+  transition: all 0.1s cubic-bezier(0.4, 1, 0.75, 0.9);
+}
+
+section > div:first-child {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+section > div:last-child {
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.color_name[class*="body"] {
+  text-transform: capitalize;
+  line-height: inherit;
+  font-size: var(--font_size_body);
+  font-weight: var(--font_weight_body_regular);
+}
+.color_name:after {
+  content: attr(data-color);
+}
+
+@media screen and (min-width: 640px) {
+  .main_colors,
+  .action_colors,
+  .alt_colors {
+    padding: 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .color_item:hover {
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow4dp);
+    transform: scale(1.02, 1.02);
+    transition: all 0.1s cubic-bezier(0.4, 1, 0.75, 0.9);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+  }
+  .color_item:hover > .color_name:after {
+    content: "Click to copy hex code";
+    text-transform: none;
+    transition: all 0.2s cubic-bezier(0.4, 1, 0.75, 0.9);
+  }
+  .action_colors {
+    display: flex;
+  }
+  .colors_array {
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .main_colors,
+  .action_colors,
+  .alt_colors {
+    padding: 2.5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .colors_array {
+    width: calc(50% - 1.25rem);
+    margin-bottom: 2.5rem;
+  }
+  .space_between {
+    width: 2.5rem;
+  }
+  .color_item:hover {
+    transform: scale(1.06, 1.02);
+  }
+}
+
+@media screen and (min-width: 1380px) {
+  .main_colors,
+  .action_colors,
+  .alt_colors {
+    padding: 2.5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .colors_array {
+    width: calc(50% - 1.25rem);
+    margin-bottom: 2.5rem;
+  }
+  .space_between {
+    width: 2.5rem;
+  }
+}
