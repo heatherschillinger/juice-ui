@@ -2,7 +2,7 @@
   "name": "JuiceUI",
   "version": "2.0.1",
   "engines": {
-    "node": "16.19.0",
+    "node": "24.X",
     "npm": "8.19.3"
   },
   "private": true,
